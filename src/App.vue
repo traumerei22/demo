@@ -2,7 +2,8 @@
 
 <template>
   <ConfigProvider>
-    <RouterView></RouterView>
+    <!-- <RouterView></RouterView> -->
+    <DataEntry />
   </ConfigProvider>
 </template>
 

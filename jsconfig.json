@@ -2,8 +2,10 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
+      "@views/*": ["./src/views*"],
       "@stores/*": ["./src/stores*"]
-    }
+    },
+    "esModuleInterop": true
   },
   "exclude": ["node_modules", "dist"]
 }
