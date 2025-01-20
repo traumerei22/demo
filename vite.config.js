@@ -51,6 +51,7 @@ export default defineConfig({
             ['default', 'axios'], // import { default as axios } from 'axios',
           ],
           'lodash-es': [['default', '$_']],
+          dayjs: [['default', 'dayjs']],
         },
       ],
 

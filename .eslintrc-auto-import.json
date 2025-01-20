@@ -95,6 +95,7 @@
     "useMenuStore": true,
     "_": true,
     "$_": true,
-    "default": true
+    "default": true,
+    "dayjs": true
   }
 }

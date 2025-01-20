@@ -3,7 +3,7 @@
 <template>
   <ConfigProvider>
     <!-- <RouterView></RouterView> -->
-    <DataEntry />
+    <TimeRangePickerSample />
   </ConfigProvider>
 </template>
 
