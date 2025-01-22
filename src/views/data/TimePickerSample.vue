@@ -9,7 +9,7 @@
     />
     <SuppTimePicker v-model:value="hourMinuteValue" format="HH:mm" @change="changeEvent" />
     <SuppTimePicker :value="$dayjs('12:08:23', 'HH:mm:ss')" disabled />
-    <SuppTimePicker :bordered="false" />
+    <SuppTimePicker :bordered="false"></SuppTimePicker>
     <!-- app.config.globalProperties.$dayjs = dayjs -->
   </div>
   <div id="sizeAndStatus" style="margin: 50px 20px 20px 50px">
