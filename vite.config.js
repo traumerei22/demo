@@ -43,6 +43,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         'pinia',
+        'vue-i18n',
 
         // custom
         {
@@ -54,17 +55,9 @@ export default defineConfig({
           dayjs: [['default', 'dayjs']],
         },
       ],
-
-      resolvers: [
-        AntDesignVueResolver({
-          importStyle: false, // css in js
-          resolveIcons: true,
-        }),
-      ],
-
       // Auto import for module exports under directories
       // by default it only scan one level of modules under the directory
-      dirs: ['./src/stores'],
+      dirs: ['./src/stores', './src/plugins'],
 
       dts: true,
 

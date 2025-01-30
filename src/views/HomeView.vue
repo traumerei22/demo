@@ -1,13 +1,6 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-
-onMounted(() => {
-  console.log('home')
-})
+<script>
+export default { name: 'HomeView' }
 </script>
+<script setup></script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<template>Home</template>

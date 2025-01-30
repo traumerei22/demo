@@ -96,6 +96,9 @@
     "_": true,
     "$_": true,
     "default": true,
-    "dayjs": true
+    "dayjs": true,
+    "commPlugin": true,
+    "i18n": true,
+    "useI18n": true
   }
 }
