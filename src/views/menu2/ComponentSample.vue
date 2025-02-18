@@ -1,37 +1,56 @@
 <template>
   <div>
-    <a-switch v-model:checked="ellipsis" />
-    <a-typography-paragraph
-      :ellipsis="ellipsis"
-      content=" Ant Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team."
-    />
-
-    <a-typography-paragraph
-      :ellipsis="ellipsis ? { rows: 2, expandable: true, symbol: 'more' } : false"
-      content="Ant Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team. Ant
-    Design, a design language for background applications, is refined by Ant UED Team."
-    />
-
-    <a-typography-text
-      :style="ellipsis ? { width: '100px' } : {}"
-      :ellipsis="ellipsis ? { tooltip: 'I am ellipsis now!' } : false"
-      content="Ant Design, a design language for background applications, is refined by Ant UED Team."
-    />
+    <SuppTree :treeData="treeData" :defaultExpandAll="true"> </SuppTree>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const ellipsis = ref(true)
+import { Input } from 'ant-design-vue'
+const render = {
+  components: {
+    Input,
+  },
+  template: {},
+}
+
+const treeData = [
+  {
+    title: h(Input), // h(<a-input v-model:value="'parent 1'" />),
+    key: '0-0',
+    children: [
+      {
+        title: h(Input),
+        key: '0-0-0',
+        disabled: true,
+        children: [
+          {
+            title: 'leaf',
+            key: '0-0-0-0',
+            disableCheckbox: true,
+          },
+          {
+            title: 'leaf',
+            key: '0-0-0-1',
+          },
+        ],
+      },
+      {
+        title: 'parent 1-1',
+        key: '0-0-1',
+        children: [
+          {
+            key: '0-0-1-0',
+            title: 'sss',
+          },
+        ],
+      },
+    ],
+  },
+]
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.ant-tree-switcher {
+  pointer-events: none;
+}
+</style>
